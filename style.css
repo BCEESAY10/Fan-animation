@@ -1,0 +1,71 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+.main {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; }
+
+.image-container {
+    margin-bottom: 20px; 
+}
+
+img{
+    border: 20px solid rgb(75, 124, 193);
+    border-radius: 50%;
+    padding: 50px;
+    animation: fananim linear infinite;
+}
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+button{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    padding: 20px 30px;
+    margin: 0 20px;
+    font-size: 25px;
+    font-weight: 550;
+    border: none;
+    background-color: silver;
+    border-radius: 50%;
+    transition: 0.1s;
+    align-self: flex-end;
+}
+button:active, button.active{
+    box-shadow: 0px 10px 10px black;
+    transform: scale(0.95);
+}
+.main button:nth-last-child(5){
+    background-color: rgb(0, 255, 0);
+}
+.main button:nth-last-child(4){
+    background-color: rgb(255, 0, 0);
+}
+@keyframes fananim{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 750px) {
+    img {
+        border-width: 10px; 
+        padding: 30px; 
+    }
+    
+    button {
+        width: 80px; 
+        height: 80px; 
+        padding: 15px 20px; 
+        font-size: 20px; 
+    }
+}
